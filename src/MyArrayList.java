@@ -16,6 +16,10 @@ public class MyArrayList {
     }
 
     private void resizeArray() {
+        int newCapacity = array.length * 2;
+        Object[] newArray = new Object[newCapacity];
+        System.arraycopy(array, 0, newArray, 0, size);
+        array = newArray;
     }
 
     public void remove(int index) {
